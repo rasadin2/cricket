@@ -1,0 +1,214 @@
+/*Laptop*/
+@media only screen and (max-width:1440px) {
+
+}
+/*Laptop*/
+@media only screen and (max-width:1366px) {
+
+}
+/*Laptop*/
+@media only screen and (max-width:1280px) {
+
+}
+/*Tab Landscape*/
+@media only screen and (max-width:1024px) {
+.head-right-button {
+    margin-right: 72px;
+}
+.notout-brand-wrap {
+    height: 60px;
+}
+}
+/*Tab Portrait*/
+@media only screen and (max-width:991px) {
+.cricket-container .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 20px;
+}
+.cricket-container .blog-image {
+    width: 100%;
+    height: 278px;
+}
+.cricket-container .blog-main-content {
+    padding-left: 25px;
+}
+.foo-colume-1,
+.foo-colume-2,
+.foo-colume-3,
+.foo-colume-4,
+.foo-colume-5 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 33.33%;
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+}
+.first-colume,
+.second-colume{
+	 -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+.cricket-text {
+    font-size: 200px;
+    line-height: 296px;
+}
+.desvription-content p {
+    font-size: 14px;
+    line-height: 27px;
+}
+.notout-navbar {
+    min-height: 70px;
+}
+
+}
+/*Tab Portrait*/
+@media only screen and (max-width:768px) {
+.header-top-bar {
+    padding: 10px 30px;
+    display: none;
+}
+.list-image-box {
+    width: 48% !important;
+}
+}
+/*Mobile View Start*/
+@media only screen and (max-width:767px) {
+.share-content .elementor-icon-list-item a {
+    padding: 7px 23px !important;
+    font-size: 18px;
+}
+.notout-main-menu {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    margin-right: auto;
+    margin-left: 0;
+}
+.header-top-bar {
+    padding: 10px 30px;
+    display: none;
+}
+.head-right-button {
+    max-width: 400px;
+    width: 100%;
+    display: none;
+}
+.not-out-box{
+	width:100% !important;
+}
+.list-image-box {
+	width:100% !important;
+}
+.platfrom-icon-box{
+		width:100% !important;
+}
+.cricket-container .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    grid-gap: 20px;
+}
+.cricket-container-match .matches-grid,
+.sports-post-container .grid{
+	display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    grid-gap: 20px;
+}
+..cricket-container-match .match-teams {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+.sports-post-container .container{
+	padding:0;
+}
+.cricket-container-match .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0;
+}
+.cricket-container-match .match-teams {
+    font-size: 16px;
+    line-height: 1.4;
+}
+.bottom-footer {
+    padding: 60px 15px 18px;
+}
+.bottom-footer ul li{
+    margin: 0 0 0px 0;
+}
+.cricket-text {
+    font-size: 91px;
+    line-height: 118px;
+}
+.animated-text {
+    font-size: 63px;
+}
+.foo-colume-1,
+.foo-colume-2,
+.foo-colume-3,
+.foo-colume-4,
+.foo-colume-5 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+	padding-left:15px;
+}
+.footer-copy-right {
+    margin-top: 14px;
+    text-align: left;
+}
+.first-colume,
+.second-colume{
+	 -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+.cricket-right-colum-box .elementor-icon {
+    width: 60px;
+    height: 60px;
+    padding: 15px;
+}
+.animated-text {
+    font-size: 40px;
+}
+.animated-text img{
+	width: 53px;
+}
+.subscribe-section h3 {
+    margin: 0 0 10px 0;
+}
+.cricket-container .blog-title {
+    font-size: 15px;
+    line-height: 26px;
+}
+.logo-box {
+    gap: 0 80px;
+}
+.notout-navbar-brand {
+    max-width: 200px;
+    margin-top: 15px;
+}
+.notout-navbar-brand img {
+    width: 137px;
+}
+.notout-navbar-toggler {
+    right: 0px;
+    top: 28px;
+ }
+.notout-main-menu {
+    top: 70px;
+ }
+}
+/*Mobile View Small*/
+@media only screen and (max-width:360px) {
+
+}
+/*Mobile Tiny Small*/
+@media only screen and (max-width:320px) {
+
+}
