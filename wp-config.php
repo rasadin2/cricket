@@ -21,7 +21,7 @@
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
 // define( 'DB_NAME', 'abc' );
-define( 'DB_NAME', 'notoutdb2' );
+define( 'DB_NAME', 'cricket' );
 
 /** Database username */
 define( 'DB_USER', 'root' );
@@ -93,15 +93,15 @@ define( 'WP_DEBUG_DISPLAY', false );
 /* Add any custom values between this line and the "stop editing" line. */
 
 // Fix for login redirect loop on localhost
-define('WP_HOME', 'http://localhost/notout');
-define('WP_SITEURL', 'http://localhost/notout');
+define('WP_HOME', 'http://localhost/cricket');
+define('WP_SITEURL', 'http://localhost/cricket');
 
 // Force correct cookie settings for localhost
 define('COOKIE_DOMAIN', '');
-define('COOKIEPATH', '/notout/');
-define('SITECOOKIEPATH', '/notout/');
-define('ADMIN_COOKIE_PATH', '/notout/');
-define('PLUGINS_COOKIE_PATH', '/notout/wp-content/plugins');
+define('COOKIEPATH', '/cricket/');
+define('SITECOOKIEPATH', '/cricket/');
+define('ADMIN_COOKIE_PATH', '/cricket/');
+define('PLUGINS_COOKIE_PATH', '/cricket/wp-content/plugins');
 
 // Disable script concatenation (can cause login issues)
 define('CONCATENATE_SCRIPTS', false);

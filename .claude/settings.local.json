@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir:*)",
+      "Bash(mysql:*)",
+      "Bash(C:xamppmysqlbinmysql.exe -u root -e \"USE cricket; SELECT option_name, option_value FROM wp_options WHERE option_name IN (''siteurl'', ''home'');\")"
+    ]
+  }
+}
