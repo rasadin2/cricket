@@ -18,6 +18,9 @@
 .notout-brand-wrap {
     height: 60px;
 }
+.foo-colume-4 {
+    padding-left: 15px;
+}
 }
 /*Tab Portrait*/
 @media only screen and (max-width:991px) {
@@ -61,7 +64,9 @@
 .notout-navbar {
     min-height: 70px;
 }
-
+.cricket-bloglist-box .container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
 }
 /*Tab Portrait*/
 @media only screen and (max-width:768px) {
@@ -79,6 +84,7 @@
     padding: 7px 23px !important;
     font-size: 18px;
 }
+
 .notout-main-menu {
     padding: 0;
     margin: 0;
@@ -203,6 +209,27 @@
 .notout-main-menu {
     top: 70px;
  }
+ .cricket-bloglist-box .container {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+.plat-from-thum-box2 .elementor-image-box-img {
+    margin-bottom: 20px !important;
+ }
+ .plat-from-thum-boxbb2 .elementor-image-box-img {
+    margin-bottom: 15px !important;
+}
+.bottom-list-section .elementor-icon-list-item,
+.list-section-bottom .elementor-icon-list-item {
+	margin-bottom:10px;
+}
+section.error-404.not-found {
+    text-align: center;
+    padding: 60px 15px;
+}
+.list-section-bottomli .elementor-icon-list-item.elementor-inline-item {
+    margin-bottom: 19px;
+    width: 100%;
+}
 }
 /*Mobile View Small*/
 @media only screen and (max-width:360px) {
