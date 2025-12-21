@@ -230,7 +230,31 @@ section.error-404.not-found {
     margin-bottom: 19px;
     width: 100%;
 }
+.welcome-popop-modal .register-btn {
+    font-size: 14px;
 }
+.bottom-footer .widget {
+    margin: 0;
+}
+.bottom-footer h4 {
+    color: #ffff;
+    margin: 31px 0 9px 0;
+}
+.menu-social-media-container ul {
+    display: flex;
+    gap: 0 20px;
+    margin: 35px 0 0 0;
+    padding: 0;
+}
+.list-section-bottom ul li.elementor-icon-list-item,
+.top-list-section ul li.elementor-icon-list-item{
+	margin-bottom:13px !important;
+}
+.title-icon-box-notout .elementor-widget-heading {
+    width: 100% !important;
+}
+}
+
 /*Mobile View Small*/
 @media only screen and (max-width:360px) {
 

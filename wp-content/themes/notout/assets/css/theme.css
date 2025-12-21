@@ -306,7 +306,7 @@ and (max-width: 1080px) {
     .notout-navbar-toggler {
         display: block;
         right: 6px;
-        top: 38px;
+       top: 22px;
         width: 24px;
         position: absolute;
         cursor: pointer;
@@ -2233,3 +2233,4 @@ section.error-404.not-found {
     text-align: center;
     padding: 80px 15px;
 }
+
