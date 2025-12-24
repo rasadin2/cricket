@@ -239,6 +239,13 @@ function notout_public_scripts() {
 	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array('popper'), '20180708', true );
 	wp_enqueue_script( 'notout', get_template_directory_uri() . '/assets/js/theme.js', array('jquery'), '20180708', true );
 
+	// Blog Load More Script
+	wp_enqueue_script( 'cricket-blog-load-more', get_template_directory_uri() . '/assets/js/blog-load-more.js', array('jquery'), '1.0.0', true );
+	wp_localize_script( 'cricket-blog-load-more', 'cricketBlogAjax', array(
+		'ajax_url' => admin_url( 'admin-ajax.php' ),
+		'nonce' => wp_create_nonce( 'cricket_load_more_nonce' )
+	) );
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
@@ -291,6 +298,15 @@ if ( class_exists( 'WooCommerce' ) ) {
  */
 require get_template_directory() . '/inc/plugins/tgm-plugin-activation.php';
 
+/**
+ * Blog Listing Shortcode
+ */
+require get_template_directory() . '/inc/blog-listing-shortcode.php';
+
+/**
+ * Blog Admin Settings Page
+ */
+require get_template_directory() . '/inc/blog-admin-settings.php';
 
 /**
  * Change the defualt WP login logo
