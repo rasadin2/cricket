@@ -1,0 +1,11 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#f0f0f0"/>
+  <g transform="translate(200, 150)">
+    <!-- Image icon -->
+    <path d="M-60,-40 L-60,40 L60,40 L60,-40 Z" fill="none" stroke="#999" stroke-width="4"/>
+    <circle cx="-30" cy="-10" r="12" fill="#999"/>
+    <path d="M-60,20 L-20,-20 L20,20 L60,-10 L60,40 L-60,40 Z" fill="#ccc"/>
+    <!-- Text -->
+    <text x="0" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#666">ছবি পাওয়া যায়নি</text>
+  </g>
+</svg>
