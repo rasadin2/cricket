@@ -253,6 +253,13 @@ section.error-404.not-found {
 .title-icon-box-notout .elementor-widget-heading {
     width: 100% !important;
 }
+.box-number-circle-cri .elementor-heading-title {
+    margin: 0 auto;
+}
+.cricket-bloglist-box .card-image .img-box {
+    position: relative;
+    height: auto;
+}
 }
 
 /*Mobile View Small*/
