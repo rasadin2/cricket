@@ -24,6 +24,9 @@
 }
 /*Tab Portrait*/
 @media only screen and (max-width:991px) {
+body .notout-navbar-toggler {
+    top: 26px;
+}
 .cricket-container .blog-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -66,6 +69,9 @@
 }
 .cricket-bloglist-box .container {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.list-top-box .elementor-icon-list-item {
+    margin-bottom: 15px !important;
 }
 }
 /*Tab Portrait*/
@@ -202,7 +208,7 @@
 .notout-navbar-brand img {
     width: 137px;
 }
-.notout-navbar-toggler {
+body .notout-navbar-toggler {
     right: 0px;
     top: 28px;
  }
@@ -259,6 +265,16 @@ section.error-404.not-found {
 .cricket-bloglist-box .card-image .img-box {
     position: relative;
     height: auto;
+}
+.number-serial-terms2 .elementor-heading-title {
+    margin: 0 auto;
+}
+.number-serial .elementor-heading-title {
+    margin: 0 auto !important;
+}
+.offer-text-circle-box .elementor-heading-title {
+    width: 180px;
+    height: 180px;
 }
 }
 

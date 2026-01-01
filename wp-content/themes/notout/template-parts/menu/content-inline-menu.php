@@ -36,8 +36,8 @@
 				</div>
 				<div class="head-right-button">
 		      <ul>
-			      <li class="login-btn"><a href="#"><span>লগইন</span></a></li>
-				  <li class="nibondon-btn"><a href="#">রেজিস্টার</a></li>
+			      <li class="login-btn"><a href="#"><span>Login</span></a></li>
+				  <li class="nibondon-btn"><a href="#">Register</a></li>
 			 </ul>
 		</div>
 		    </div>
