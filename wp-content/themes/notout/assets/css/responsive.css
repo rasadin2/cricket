@@ -276,6 +276,11 @@ section.error-404.not-found {
     width: 180px;
     height: 180px;
 }
+.content-text p {
+    font-size: 16px;
+    line-height: 28px;
+    margin-bottom: 18px;
+}
 }
 
 /*Mobile View Small*/
