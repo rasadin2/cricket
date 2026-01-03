@@ -281,6 +281,12 @@ section.error-404.not-found {
     line-height: 28px;
     margin-bottom: 18px;
 }
+.faq-content-accordion br{
+	display:none;
+}
+.home {
+	overflow-x:hidden !important;
+}
 }
 
 /*Mobile View Small*/
