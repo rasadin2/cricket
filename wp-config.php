@@ -21,7 +21,7 @@
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
 // define( 'DB_NAME', 'abc' );
-define( 'DB_NAME', 'cricket' );
+define( 'DB_NAME', 'notoutcricket' );
 
 /** Database username */
 define( 'DB_USER', 'root' );
