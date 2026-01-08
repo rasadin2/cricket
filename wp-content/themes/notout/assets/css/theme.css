@@ -95,6 +95,9 @@ header .container {
     margin: 0px;
     background-color: #f1f1f1;
 }
+.notout-main-menu li > .sub-menu li:last-child a {
+    border-bottom: 0px solid rgba(255,255,255, 0.7);
+}
 .open {
     display: block !important;
 }
