@@ -1,6 +1,8 @@
 /*Laptop*/
 @media only screen and (max-width:1440px) {
-
+.list-top-box span.elementor-icon-list-text {
+    font-size: 12px !important;
+}
 }
 /*Laptop*/
 @media only screen and (max-width:1366px) {
