@@ -40,7 +40,7 @@ function cricket_blog_listing_shortcode( $atts ) {
     ob_start();
     ?>
     <div class="cricket-bloglist-box blog-listinng" data-posts-per-page="<?php echo esc_attr( $atts['posts_per_page'] ); ?>" data-category="<?php echo esc_attr( $atts['category'] ); ?>" data-order="<?php echo esc_attr( $atts['order'] ); ?>" data-orderby="<?php echo esc_attr( $atts['orderby'] ); ?>">
-        <div class="count-blog"><?php echo $total_posts; ?> টি আর্টিকেল পাওয়া গেছে</div>
+        <div class="count-blog"><?php echo $total_posts; ?> Articles found</div>
         <div class="container cricket-blog-posts-container">
             <?php
             if ( $query->have_posts() ) {
@@ -49,7 +49,7 @@ function cricket_blog_listing_shortcode( $atts ) {
                     cricket_render_blog_card();
                 }
             } else {
-                echo '<p>কোন আর্টিকেল পাওয়া যায়নি।</p>';
+                echo '<p>No articles found.</p>';
             }
             wp_reset_postdata();
             ?>
@@ -58,9 +58,9 @@ function cricket_blog_listing_shortcode( $atts ) {
         <?php if ( $query->max_num_pages > 1 ) : ?>
         <div class="load-more-wrapper" style="text-align: center; margin-top: 30px;">
             <button class="cricket-load-more-btn" data-page="1" data-max-pages="<?php echo $query->max_num_pages; ?>">
-                আরও দেখুন
+                Load More
             </button>
-            <div class="cricket-loading" style="display: none; margin-top: 15px;">লোড হচ্ছে...</div>
+            <div class="cricket-loading" style="display: none; margin-top: 15px;">Loading...</div>
         </div>
         <?php endif; ?>
     </div>
@@ -82,13 +82,12 @@ function cricket_render_blog_card() {
         $thumbnail_url = get_template_directory_uri() . '/assets/img/no-image-placeholder.svg';
     }
 
-    // Get post date in Bengali
+    // Get post date in English
     $post_date = get_the_date( 'j F Y' );
-    $post_date_bengali = cricket_convert_to_bengali_date( $post_date );
 
     // Get category (first category)
     $categories = get_the_category();
-    $category_name = ! empty( $categories ) ? $categories[0]->name : 'সাধারণ';
+    $category_name = ! empty( $categories ) ? $categories[0]->name : 'General';
 
     // Calculate reading time for Bengali content
     $content = get_the_content();
@@ -104,7 +103,6 @@ function cricket_render_blog_card() {
 
     // Calculate reading time (200 words per minute)
     $reading_time = max( 1, ceil( $total_word_count / 200 ) );
-    $reading_time_bengali = cricket_convert_number_to_bengali( $reading_time );
 
     ?>
     <div class="card">
@@ -116,7 +114,7 @@ function cricket_render_blog_card() {
                 <svg class="date-icon" fill="white" viewBox="0 0 24 24">
                     <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"/>
                 </svg>
-                <?php echo $post_date_bengali; ?>
+                <?php echo $post_date; ?>
             </div>
             <div class="date-badge sports-name">
                 <?php echo esc_html( $category_name ); ?>
@@ -126,9 +124,9 @@ function cricket_render_blog_card() {
             <h2 class="card-title"><?php echo esc_html( $title ); ?></h2>
             <p class="card-description"><?php echo esc_html( wp_trim_words( $excerpt, 20, '...' ) ); ?></p>
             <div class="card-footer">
-                <span class="read-time"><?php echo $reading_time_bengali; ?> মিনিট পড়ুন</span>
+                <span class="read-time"><?php echo $reading_time; ?> min read</span>
                 <a href="<?php echo esc_url( $permalink ); ?>" class="read-more-btn">
-                    আরও পড়ুন
+                    Read More
                     <span class="arrow">›</span>
                 </a>
             </div>
@@ -218,7 +216,7 @@ function cricket_load_more_posts_ajax() {
             'max_pages' => $query->max_num_pages
         ) );
     } else {
-        wp_send_json_error( array( 'message' => 'কোন আর্টিকেল পাওয়া যায়নি।' ) );
+        wp_send_json_error( array( 'message' => 'No articles found.' ) );
     }
 
     wp_reset_postdata();
@@ -273,7 +271,7 @@ function cricket_featured_posts_shortcode( $atts ) {
     ob_start();
     ?>
     <div class="cricket-bloglist-box blog-listinng cricket-featured-posts" data-posts-per-page="<?php echo esc_attr( $atts['posts_per_page'] ); ?>" data-category="<?php echo esc_attr( $atts['category'] ); ?>" data-order="<?php echo esc_attr( $atts['order'] ); ?>" data-orderby="<?php echo esc_attr( $atts['orderby'] ); ?>">
-        <div class="count-blog">⭐ <?php echo cricket_convert_number_to_bengali( $total_posts ); ?> টি ফিচার্ড আর্টিকেল পাওয়া গেছে</div>
+        <div class="count-blog">⭐ <?php echo $total_posts; ?> Featured articles found</div>
         <div class="container cricket-blog-posts-container">
             <?php
             if ( $query->have_posts() ) {
@@ -282,7 +280,7 @@ function cricket_featured_posts_shortcode( $atts ) {
                     cricket_render_blog_card();
                 }
             } else {
-                echo '<p>কোন ফিচার্ড আর্টিকেল পাওয়া যায়নি।</p>';
+                echo '<p>No featured articles found.</p>';
             }
             wp_reset_postdata();
             ?>
@@ -291,9 +289,9 @@ function cricket_featured_posts_shortcode( $atts ) {
         <?php if ( $query->max_num_pages > 1 ) : ?>
         <div class="load-more-wrapper" style="text-align: center; margin-top: 30px;">
             <button class="cricket-load-more-btn cricket-featured-load-more" data-page="1" data-max-pages="<?php echo $query->max_num_pages; ?>" data-featured="1">
-                আরও দেখুন
+                Load More
             </button>
-            <div class="cricket-loading" style="display: none; margin-top: 15px;">লোড হচ্ছে...</div>
+            <div class="cricket-loading" style="display: none; margin-top: 15px;">Loading...</div>
         </div>
         <?php endif; ?>
     </div>
@@ -349,7 +347,7 @@ function cricket_load_more_featured_posts_ajax() {
             'max_pages' => $query->max_num_pages
         ) );
     } else {
-        wp_send_json_error( array( 'message' => 'কোন আর্টিকেল পাওয়া যায়নি।' ) );
+        wp_send_json_error( array( 'message' => 'No articles found.' ) );
     }
 
     wp_reset_postdata();
@@ -364,7 +362,7 @@ add_action( 'wp_ajax_nopriv_cricket_load_more_featured_posts', 'cricket_load_mor
 function cricket_add_featured_meta_box() {
     add_meta_box(
         'cricket_featured_post',
-        '⭐ ফিচার্ড পোস্ট',
+        '⭐ Featured Post',
         'cricket_featured_meta_box_callback',
         'post',
         'side',
@@ -383,10 +381,10 @@ function cricket_featured_meta_box_callback( $post ) {
     <p>
         <label>
             <input type="checkbox" name="cricket_featured_post" value="1" <?php checked( $is_featured, '1' ); ?>>
-            এই পোস্টটি ফিচার্ড করুন
+            Mark this post as featured
         </label>
     </p>
-    <p class="description">ফিচার্ড পোস্ট শুধুমাত্র [cricket_featured_posts] শর্টকোডে দেখাবে।</p>
+    <p class="description">Featured posts will only show in [cricket_featured_posts] shortcode.</p>
     <?php
 }
 
@@ -429,7 +427,7 @@ function cricket_add_featured_column( $columns ) {
     foreach ( $columns as $key => $value ) {
         $new_columns[ $key ] = $value;
         if ( $key === 'title' ) {
-            $new_columns['featured'] = '⭐ ফিচার্ড';
+            $new_columns['featured'] = '⭐ Featured';
         }
     }
     return $new_columns;
@@ -443,9 +441,9 @@ function cricket_display_featured_column( $column, $post_id ) {
     if ( $column === 'featured' ) {
         $is_featured = get_post_meta( $post_id, '_cricket_featured_post', true );
         if ( $is_featured === '1' ) {
-            echo '<span style="color: #ffc107; font-size: 18px; font-weight: bold;" title="ফিচার্ড পোস্ট">⭐ হ্যাঁ</span>';
+            echo '<span style="color: #ffc107; font-size: 18px; font-weight: bold;" title="Featured Post">⭐ Yes</span>';
         } else {
-            echo '<span style="color: #ccc;" title="ফিচার্ড নয়">—</span>';
+            echo '<span style="color: #ccc;" title="Not Featured">—</span>';
         }
     }
 }
@@ -492,7 +490,7 @@ function cricket_add_featured_quick_edit() {
             var post_id = $(this).closest('tr').attr('id').replace('post-', '');
             var $row = $('#post-' + post_id);
             var $featured_column = $row.find('.column-featured');
-            var is_featured = $featured_column.text().trim().indexOf('হ্যাঁ') !== -1;
+            var is_featured = $featured_column.text().trim().indexOf('Yes') !== -1;
 
             // Set checkbox state
             var $quick_edit_row = $('#edit-' + post_id);
@@ -518,7 +516,7 @@ function cricket_add_featured_quick_edit_field( $column_name, $post_type ) {
         <div class="inline-edit-col">
             <label class="alignleft">
                 <input type="checkbox" name="cricket_featured_post_quick" value="1">
-                <span class="checkbox-title">⭐ ফিচার্ড পোস্ট</span>
+                <span class="checkbox-title">⭐ Featured Post</span>
             </label>
         </div>
     </fieldset>
@@ -561,11 +559,11 @@ function cricket_add_featured_bulk_edit( $column_name, $post_type ) {
     <fieldset class="inline-edit-col-right">
         <div class="inline-edit-col">
             <label class="inline-edit-group">
-                <span class="title">⭐ ফিচার্ড পোস্ট</span>
+                <span class="title">⭐ Featured Post</span>
                 <select name="cricket_featured_post_bulk">
-                    <option value="-1">— পরিবর্তন নেই —</option>
-                    <option value="1">হ্যাঁ</option>
-                    <option value="0">না</option>
+                    <option value="-1">— No Change —</option>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
                 </select>
             </label>
         </div>
